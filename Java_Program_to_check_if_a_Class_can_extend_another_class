@@ -1,0 +1,39 @@
+/*Write a program in java to check if a class can extends another class and/ can implement one and more than one interface*/
+
+interface InterfaceA {
+    void methodA();
+}
+
+interface InterfaceB {
+    void methodB();
+}
+
+class ParentClass {
+    void parentMethod() {
+        System.out.println("Parent method implementation");
+    }
+}
+
+class ChildClass extends ParentClass implements InterfaceA, InterfaceB {
+    public void methodA() {
+        System.out.println("methodA implementation");
+    }
+    
+    public void methodB() {
+        System.out.println("methodB implementation");
+    }
+    
+    void childMethod() {
+        System.out.println("Child method implementation");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        ChildClass obj = new ChildClass();
+        obj.parentMethod();
+        obj.methodA();
+        obj.methodB();
+        obj.childMethod();
+    }
+}
