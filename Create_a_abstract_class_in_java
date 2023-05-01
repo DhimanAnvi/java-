@@ -1,0 +1,25 @@
+abstract class shape {
+    abstract void RectangleArea(int lenght, int breath);
+    abstract void SquareArea(int side);
+    abstract void CircleArea(int radius);
+    
+}
+class Area extends shape {
+    void RectangleArea(int a, int b){
+        System.out.println(a*b);
+    }
+    void SquareArea(int s) {
+        System.out.println(s*s);
+    }
+    void CircleArea(int s){
+        System.out.println(3.14*s*s);
+    }
+}
+class Main {
+    public static void main(String [] args){
+        Area a = new Area();
+        a.RectangleArea(3,4);
+        a.SquareArea(3);
+        a.CircleArea(4);
+    }
+}
