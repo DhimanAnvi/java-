@@ -1,0 +1,19 @@
+public class JavaExceptionExample
+{
+    public static void main(String [] args){
+        String s1 = "abc";
+        try{
+             int a[] = new int[5];
+            a[10]=50;
+            /*int i = Integer.parseInt(s1);
+            String s = null;
+            int data = 100/0;
+            System.out.println(s.length());*/
+        }
+        catch(ArithmeticException e){System.out.println(e);}
+    catch(NullPointerException t){System.out.println(t);}
+    catch(NumberFormatException z){System.out.println(z);}
+    catch(ArrayIndexOutOfBoundsException a){System.out.println(a);}
+    System.out.println("rest of the code...");
+    }
+}
