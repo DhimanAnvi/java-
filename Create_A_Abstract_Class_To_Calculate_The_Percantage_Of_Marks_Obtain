@@ -1,0 +1,57 @@
+import java.util.Scanner;
+abstract class Marks {
+    public abstract float getPercentage();
+}
+
+class A extends Marks {
+    float sub1, sub2, sub3;
+    public A(float sub1, float sub2, float sub3) {
+        this.sub1 = sub1;
+        this.sub2 = sub2;
+        this.sub3 = sub3;
+    }
+    public float getPercentage() {
+        return ((sub1 + sub2 + sub3) / 3);
+    }
+}
+
+class B extends Marks {
+    float sub1, sub2, sub3, sub4;
+    public B(float sub1, float sub2, float sub3, float sub4) {
+        this.sub1 = sub1;
+        this.sub2 = sub2;
+        this.sub3 = sub3;
+        this.sub4 = sub4;
+    }
+    public float getPercentage() {
+        return ((sub1 + sub2 + sub3 + sub4) / 4);
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter marks for Student A (out of 100) - Subject 1: ");
+        float sub1A = scanner.nextFloat();
+        System.out.print("Enter marks for Student A (out of 100) - Subject 2: ");
+        float sub2A = scanner.nextFloat();
+        System.out.print("Enter marks for Student A (out of 100) - Subject 3: ");
+        float sub3A = scanner.nextFloat();
+        A studentA = new A(sub1A, sub2A, sub3A);
+        System.out.println("Percentage of marks for Student A: " + studentA.getPercentage() + "%");
+
+        System.out.print("\nEnter marks for Student B (out of 100) - Subject 1: ");
+        float sub1B = scanner.nextFloat();
+        System.out.print("Enter marks for Student B (out of 100) - Subject 2: ");
+        float sub2B = scanner.nextFloat();
+        System.out.print("Enter marks for Student B (out of 100) - Subject 3: ");
+        float sub3B = scanner.nextFloat();
+        System.out.print("Enter marks for Student B (out of 100) - Subject 4: ");
+        float sub4B = scanner.nextFloat();
+        B studentB = new B(sub1B, sub2B, sub3B, sub4B);
+        System.out.println("Percentage of marks for Student B: " + studentB.getPercentage() +"%");
+
+        scanner.close();
+    }
+}
