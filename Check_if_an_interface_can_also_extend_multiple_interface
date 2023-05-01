@@ -1,0 +1,35 @@
+//Write a program in java to check if an interface can also extend multiple interfaces. 
+interface A {
+   void test();
+   void test1();
+}
+interface B {
+    void test();
+    void test2();
+}
+interface InterfaceC extends A,B {
+    void test3();
+}
+class MyClass implements InterfaceC {
+   public void test() {
+      System.out.println("Testing");
+   }
+   public void test1() {
+      System.out.println("Testing1");
+   }
+   public void test2() {
+      System.out.println("Testing2");
+   }
+   public void test3() {
+      System.out.println("Testing3");
+   }
+}
+public class Main {
+   public static void main(String[] args) {
+      MyClass obj = new MyClass();
+      obj.test();
+      obj.test1();
+      obj.test2();
+      obj.test3();
+   }
+ }
